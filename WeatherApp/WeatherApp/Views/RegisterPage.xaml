@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeatherApp.Views.RegisterPage"
+             Title="REGISTER">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" Margin="50,0">
+            <Entry x:Name="name" Placeholder="UserName" Margin="0,0,0,15" />
+            <Entry x:Name="login" Placeholder="Email" Margin="0,0,0,15" />
+            <Entry x:Name="password" Placeholder="Password" />
+            <Button
+                Margin="50,40,50,0"
+                BackgroundColor="#2296F3"
+                TextColor="White"
+                CornerRadius="5"
+                Text="Register"
+                Clicked="RegisterClick"
+             />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

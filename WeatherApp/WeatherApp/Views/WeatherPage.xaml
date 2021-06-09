@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeatherApp.Views.WeatherPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="label" Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="Start" 
+                HorizontalOptions="Center" 
+                Margin="30"
+                FontSize="18"
+            />
+
+            <ListView x:Name="listeTemp" VerticalOptions="CenterAndExpand">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid HeightRequest="100" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="120" />
+                                    <ColumnDefinition Width="50" />
+                                    <ColumnDefinition Width="0.2*" />
+                                    <ColumnDefinition Width="0.4*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50" />
+                                </Grid.RowDefinitions>
+
+                                <Label Grid.Column="0" Text="{Binding Date}" Margin="20,5"/>
+                                <Label Grid.Column="1" Text="{Binding TemperatureC}" HorizontalOptions="End" FontSize="16" Margin="5,5"/>
+                                <Label Grid.Column="2" Text=" °C" Margin="0,5" />
+                                <Label Grid.Column="3" Text="{Binding Summary}" HorizontalOptions="End" Margin="30,5"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button x:Name="log" Margin="20" Text="Logout" Clicked="LogoutClick" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
